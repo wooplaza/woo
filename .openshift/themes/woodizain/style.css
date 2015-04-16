@@ -1,0 +1,454 @@
+/*
+	Theme Name:   WooDizain
+	Theme URI:    http://ridizain.com/downloads/woodizain/
+	Description:  WooDizain is a Ridizain child theme to add support for WooCommerce plugin.
+	Author:       Zulfikar Nore
+	Author URI:   http://ridizain.com/
+	Template:     ridizain
+	Version:      1.0.1
+	License:	  GNU General Public License v2.0
+    License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+	Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, sticky-post, theme-options, translation-ready
+	Text Domain:  woodizain
+*/
+
+@import url("../ridizain/style.css");
+
+/*  
+Copyright 2015 WP Strap Code and Ridizain. (email : info@ridizain.com)
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2,
+as published by the Free Software Foundation.
+
+You may NOT assume that you can use any other version of the GPL.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301
+USA
+
+The license for this software can also likely be found here:
+http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* ------------------------------------------------------------------------- *
+ *  Theme customization starts here - Add all of your customization css here. 
+ * Use the @media section to add styling for other devices.
+/* ------------------------------------------------------------------------- */
+
+/* General theme adjustments */
+body { background-color: #f5f5f5;}
+
+.site,
+#masthead,
+.site-footer {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.featured-content {
+	padding-right: 40px;
+}
+
+.widget input[type="text"] {
+	width: 100%;
+}
+
+#searchsubmit {
+	display: none;
+}
+
+/* Change theme's color scheme */
+
+a:active,
+a:hover {
+	color: #03c1bb;
+}
+
+::selection {
+	background: #049b96;
+}
+
+::-moz-selection {
+	background: #049b96;
+}
+
+button,
+.contributor-posts-link,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background-color: #049b96;
+}
+
+button:hover,
+button:focus,
+.contributor-posts-link:hover,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	background-color: #03c1bb;
+}
+
+.search-toggle {
+	background-color: #049b96;
+}
+
+.search-toggle:hover,
+.search-toggle.active {
+	background-color: #03c1bb;
+}
+
+.search-box {
+	background-color: #03c1bb;
+}
+
+.site-navigation a:hover {
+	color: #03c1bb;
+}
+
+.entry-title a:hover {
+	color: #03c1bb;
+}
+
+.entry-meta a:hover {
+	color: #03c1bb;
+}
+
+.cat-links a:hover {
+	color: #03c1bb;
+}
+
+.entry-meta .tag-links a:hover {
+	background-color: #03c1bb;
+}
+
+.entry-meta .tag-links a:hover:before {
+	border-right-color: #03c1bb;
+}
+
+.entry-content .edit-link a:hover {
+	color: #03c1bb;
+}
+
+.hentry .mejs-controls .mejs-time-rail .mejs-time-current {
+	background: #049b96;
+}
+
+.page-links a:hover {
+	background: #03c1bb;
+	border: 1px solid #03c1bb;
+	color: #fff;
+}
+
+.post-navigation a:hover,
+.image-navigation a:hover {
+	color: #03c1bb;
+}
+
+.paging-navigation .page-numbers.current {
+	border-top: 5px solid #049b96;
+}
+
+.paging-navigation a:hover {
+	border-top: 5px solid #03c1bb;
+}
+
+.comment-author a:hover,
+.comment-list .pingback a:hover,
+.comment-list .trackback a:hover,
+.comment-metadata a:hover {
+	color: #03c1bb;
+}
+
+.comment-reply-title small a:hover {
+	color: #03c1bb;
+}
+
+.widget a:hover {
+	color: #03c1bb;
+}
+
+.widget button,
+.widget input[type="button"],
+.widget input[type="reset"],
+.widget input[type="submit"] {
+	background-color: #049b96;
+}
+
+.widget input[type="button"]:hover,
+.widget input[type="button"]:focus,
+.widget input[type="reset"]:hover,
+.widget input[type="reset"]:focus,
+.widget input[type="submit"]:hover,
+.widget input[type="submit"]:focus {
+	background-color: #03c1bb;
+}
+
+.widget-title a:hover {
+	color: #03c1bb;
+}
+
+.widget_calendar tbody a {
+	background-color: #049b96;
+	color: #000;
+	display: block;
+}
+
+.widget_calendar tbody a:hover {
+	background-color: #03c1bb;
+}
+
+.widget_ridizain_ephemera .entry-meta a:hover {
+	color: #03c1bb;
+}
+
+.content-sidebar .widget a {
+	color: #049b96;
+}
+
+.content-sidebar .widget a:hover {
+	color: #03c1bb;
+}
+
+.content-sidebar .widget input[type="button"],
+.content-sidebar .widget input[type="reset"],
+.content-sidebar .widget input[type="submit"] {
+	background-color: #049b96;
+}
+
+.content-sidebar .widget input[type="button"]:hover,
+.content-sidebar .widget input[type="button"]:focus,
+.content-sidebar .widget input[type="reset"]:hover,
+.content-sidebar .widget input[type="reset"]:focus,
+.content-sidebar .widget input[type="submit"]:hover,
+.content-sidebar .widget input[type="submit"]:focus {
+	background-color: #03c1bb;
+}
+
+.content-sidebar .widget .widget-title a:hover {
+	color: #03c1bb;
+}
+
+.content-sidebar .widget_ridizain_ephemera .entry-meta a:hover {
+	color: #03c1bb;
+}
+
+.read-more.button:hover{
+    background: #03c1bb;
+	border: 3px solid #03c1bb;
+}
+
+.site-info a:hover {
+	color: #03c1bb;
+}
+
+.featured-content a:hover {
+	color: #000;
+}
+
+.featured-content .entry-header {
+	background-color: #03c1bb;
+}
+
+.slider-control-paging a:hover:before {
+	background-color: #03c1bb;
+}
+
+.slider-control-paging .slider-active:before,
+.slider-control-paging .slider-active:hover:before {
+	background-color: #049b96;
+}
+
+.slider-direction-nav a:hover {
+	background-color: #049b96;
+}
+
+#subscription-toggle {
+   background-color: #049b96;
+}
+
+.bbp-submit-wrapper .button {
+    background: none repeat scroll 0% 0% #049b96;
+}
+#subscription-toggle:hover,
+.bbp-submit-wrapper .button:hover {
+    background: none repeat scroll 0% 0% #03c1bb;
+}
+
+@media screen and (min-width: 300px) and (max-width: 1007px) {
+    .featured-content {
+        padding-right: 0;
+    }
+	.full-width .site-content {
+		margin-right: 0;
+	}
+}
+
+@media screen and (min-width: 673px) {
+    .grid .featured-content .entry-header {
+		border-color: #03c1bb;
+	}
+}
+
+@media screen and (min-width: 783px) {
+    .primary-navigation ul ul {
+		background-color: #049b96;
+	}
+	
+	.primary-navigation li:hover > a,
+	.primary-navigation li.focus > a {
+		background-color: #049b96;
+	}
+
+	.primary-navigation ul ul a:hover,
+	.primary-navigation ul ul li.focus > a {
+		background-color: #03c1bb;
+	}
+}
+
+@media screen and (min-width: 1008px) {
+    .secondary-navigation ul ul {
+		background-color: #049b96;
+	}
+	
+	.secondary-navigation li:hover > a,
+	.secondary-navigation li.focus > a {
+		background-color: transparent;
+		color: #049b96;
+	}
+
+	.secondary-navigation ul ul a:hover,
+	.secondary-navigation ul ul li.focus > a {
+		background-color: #03c1bb;
+	}
+}
+
+.woocommerce a,
+.woocommerce ul.products li.product .price {
+    color: #049b96;
+}
+
+.woocommerce a:hover,
+.woocommerce ul.products li.product .price:hover {
+    color: #03c1bb;
+}
+
+/* End of new color scheme */
+
+/* Add in WooCommerce CSS adjustments*/
+
+.woocommerce .cart-collaterals .cart_totals table th, .woocommerce-page .cart-collaterals .cart_totals table th {
+    padding: 6px 12px 0px 6px; width: 100%; }
+  
+.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, 
+.woocommerce-page div.product div.images {
+    float: none; width: 100%; }
+  
+.woocommerce #content div.product div.images img, .woocommerce div.product div.images img, .woocommerce-page #content div.product div.images img, 
+.woocommerce-page div.product div.images img {
+    max-height: 472px; height: auto; }
+  
+.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, 
+.woocommerce-page div.product div.summary {
+    float: none;width: 85%; margin-top: -18px;}
+	
+.woocommerce #content div.product .product_title, .woocommerce div.product .product_title, .woocommerce-page #content div.product .product_title, 
+.woocommerce-page div.product .product_title {
+    font-size: 28px; font-weight: 400; }
+  
+.woocommerce #reviews #comments h2, .woocommerce-page #reviews #comments h2 {font-size: 22px; font-weight: 400; }
+  
+.woocommerce #content input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, 
+.woocommerce input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce-page #respond input#submit.alt, 
+.woocommerce-page a.button.alt, .woocommerce-page button.button.alt, .woocommerce-page input.button.alt,
+.woocommerce .button.add_to_cart_button {
+    background: -moz-linear-gradient(center top , #049b96 0px, #049b96 100%) repeat scroll 0% 0% transparent;
+    border-color: #049b96; border: 0px none; border-radius: 2px; color: #FFF; font-size: 12px; font-weight: 600;
+    padding: 8px 30px 10px; text-transform: uppercase; vertical-align: bottom; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.6);
+  }
+  
+.woocommerce #content input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, 
+.woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce-page #content input.button.alt:hover, 
+.woocommerce-page #respond input#submit.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce-page button.button.alt:hover, 
+.woocommerce-page input.button.alt:hover, .woocommerce .button.add_to_cart_button:hover {
+    background: -moz-linear-gradient(center top , #03c1bb 0px, #03c1bb 100%) repeat scroll 0% 0% transparent;
+    border-color: #03c1bb; border: 0px none; border-radius: 2px; color: #FFF; font-size: 12px; font-weight: 600;
+    padding: 8px 30px 10px; text-transform: uppercase; vertical-align: bottom; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.6);
+  }
+  
+.woocommerce .woocommerce-product-rating .star-rating, .woocommerce-page .woocommerce-product-rating .star-rating,
+.woocommerce .star-rating span:before, .woocommerce-page .star-rating span:before  {float: right; color: #049b96; }
+  
+.woocommerce ul.cart_list li img, .woocommerce ul.product_list_widget li img, .woocommerce-page ul.cart_list li img, 
+.woocommerce-page ul.product_list_widget li img {
+    float: left; margin-right: 10px; margin-left: 0; width: 62px; }
+
+.woocommerce span.onsale, .woocommerce-page span.onsale {
+    font-size: 16px; width: 48px; height: 48px; line-height: 48px; border-radius: 12%; opacity: 0.9;
+	background:#049b96;
+	background:-webkit-gradient(linear,left top,left bottom,from(#049b96),to(#049b96));
+	background:-webkit-linear-gradient(#049b96,#049b96);
+	background:-moz-linear-gradient(center top,#049b96 0,#049b96 100%);
+	background:-moz-gradient(center top,#049b96 0,#049b96 100%);}
+	
+.woocommerce ul.products li.product .onsale, .woocommerce-page ul.products li.product .onsale {
+    top: 1px; right: 1px; left: auto; margin: 0px; font-size: 12px; width: 32px; height: 32px; line-height: 32px;}
+	
+.woocommerce #content div.product .woocommerce-tabs .panel, .woocommerce div.product .woocommerce-tabs .panel, 
+.woocommerce-page #content div.product .woocommerce-tabs .panel, .woocommerce-page div.product .woocommerce-tabs .panel {
+   padding-left: 20px;}
+   
+.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-message,
+.woocommerce .woocommerce-info, .woocommerce-page .woocommerce-info {
+    border-top: 3px solid #049b96;
+}
+
+.woocommerce #payment div.payment_box, .woocommerce-page #payment div.payment_box {
+background: #049b96;
+background: -webkit-gradient(linear,left top,left bottom,from(#049b96),to(#049b96));
+background: -webkit-linear-gradient(#049b96,#049b96);
+background: -moz-linear-gradient(center top,#049b96 0,#049b96 100%);
+background: -moz-gradient(center top,#049b96 0,#049b96 100%);
+color: #fff;
+}
+
+.woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before,
+.woocommerce .woocommerce-info:before, .woocommerce-page .woocommerce-info:before {
+    background-color: #049b96;
+}
+
+.woocommerce #content input.button, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce-page #content input.button, .woocommerce-page #respond input#submit, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button {
+    padding: 6px 10px;
+    color: #049b96;
+    border: 1px solid #049b96;
+}
+
+@media screen and (max-width: 593px) {
+    .woocommerce .site-content {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (min-width: 594px) {
+    .woocommerce .site-content {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (min-width: 673px) {
+    .woocommerce .site-content {
+        padding-left: 15px;
+    }
+}
+/* End WooCommerce Support */
