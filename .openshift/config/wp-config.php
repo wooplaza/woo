@@ -119,6 +119,11 @@ define('DB_COLLATE', '');
 
 require_once(getenv('OPENSHIFT_REPO_DIR') . '.openshift/openshift.inc');
 
+/* Multisite */
+2
+define( 'WP_ALLOW_MULTISITE', true );
+
+
 /*
 |--------------------------------------------------------------------------
 | That's all, stop editing! Happy blogging.
