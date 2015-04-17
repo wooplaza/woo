@@ -70,6 +70,10 @@ ln -sf ${OPENSHIFT_DATA_DIR}uploads   ${OPENSHIFT_REPO_DIR}php/wp-content/
 
 cp -f ${OPENSHIFT_REPO_DIR}.openshift/config/wp-config.php ${dest_dir}/wp-config.php
 
+# Copy the MU Sunrise file
+
+cp -f ${OPENSHIFT_REPO_DIR}.openshift/config/sunrise.php ${dest_dir}/wp-content/sunrise.php
+
 
 # Use repository htaccess if exists 
 if [  -f ${OPENSHIFT_REPO_DIR}.openshift/config/.htaccess ]; then

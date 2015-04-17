@@ -108,6 +108,14 @@ define('DB_HOST', getenv('OPENSHIFT_MYSQL_DB_HOST') . ':' . getenv('OPENSHIFT_MY
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
+
+/*
+|--------------------------------------------------------------------------
+| For MU Domain Mapping
+|--------------------------------------------------------------------------
+*/
+define( 'SUNRISE', 'on' );
+
 /*
 |--------------------------------------------------------------------------
 | Authentication Unique Keys and Salts - DO NOT MODIFY
