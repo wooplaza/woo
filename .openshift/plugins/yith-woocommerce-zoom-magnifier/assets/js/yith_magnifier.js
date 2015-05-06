@@ -296,19 +296,14 @@
             self.IMG_smallImage = new Image();
             self.IMG_smallImage.src = self.zoomImage.attr('src');
 
-            console.log($.browser);
             if( $.browser.msie && $.browser.version == 8 ) {
-                console.log('1');
                 $(self.IMG_zoomImage).load(function(){
-                    console.log('2');
 
                     self._initTrap();
                 });
             } else {
-                console.log('3');
 
                 $([self.IMG_zoomImage, self.IMG_smallImage]).imagesLoaded(function(){
-                    console.log('4');
 
                     self._initTrap();
                 });

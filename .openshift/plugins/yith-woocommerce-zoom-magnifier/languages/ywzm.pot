@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Order Tracking\n"
-"POT-Creation-Date: 2015-03-17 14:21+0100\n"
-"PO-Revision-Date: 2015-03-17 14:21+0100\n"
+"POT-Creation-Date: 2015-04-22 12:25+0100\n"
+"PO-Revision-Date: 2015-04-22 12:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <plugins@yithemes.com>\n"
 "Language: en\n"
@@ -17,115 +17,27 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../class.yith-wcmg-admin.php:92
+#: ../class.yith-wcmg-admin.php:91
 msgid "Image Size"
 msgstr ""
 
-#: ../class.yith-wcmg-admin.php:93 ../plugin-options/general-options.php:17
+#: ../class.yith-wcmg-admin.php:92 ../plugin-options/general-options.php:17
 msgid "The size of the images used within the magnifier box"
 msgstr ""
 
-#: ../init.php:45
+#: ../init.php:43
 msgid ""
 "YITH WooCommerce Zoom Magnifier is enabled but not effective. It requires "
-"WooCommerce in order to work."
+"Woocommerce in order to work."
 msgstr ""
 
-#: ../lib/class.yith-products-exclusion.php:40
-msgid "product"
+#: ../init.php:52
+msgid ""
+"You can't activate the free version of YITH WooCommerce Zoom Magnifier while "
+"you are using the premium one."
 msgstr ""
 
-#: ../lib/class.yith-products-exclusion.php:41
-msgid "products"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:59
-msgid "Product"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:84
-msgid "Remove from exclusions"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:87
-msgid "Edit product"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:92
-msgid "Remove from list"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:132
-#, php-format
-msgid "%s product removed successfully"
-msgid_plural "%s products removed successfully"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../lib/class.yith-products-exclusion.php:152
-#, php-format
-msgid "%s product added successfully"
-msgid_plural "%s products added successfully"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../lib/class.yith-products-exclusion.php:156
-msgid "Product updated successfully"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:175
-#: ../lib/class.yith-ywzm-plugin-fw-loader.php:130
-msgid "Single Product Exclusion List"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:186
-msgid "Add Products"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:206
-msgid "Products to exclude"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:229
-msgid "Add product exclusion"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:233
-msgid "Return to exclusion list"
-msgstr ""
-
-#: ../lib/class.yith-products-exclusion.php:288
-msgid "Select at least one product"
-msgstr ""
-
-#: ../lib/class.yith-woocommerce-zoom-magnifier-premium.php:134
-msgid "Exclude product categories"
-msgstr ""
-
-#: ../lib/class.yith-woocommerce-zoom-magnifier-premium.php:149
-msgid "Top"
-msgstr ""
-
-#: ../lib/class.yith-woocommerce-zoom-magnifier-premium.php:150
-#: ../plugin-options/general-options.php:104
-msgid "Right"
-msgstr ""
-
-#: ../lib/class.yith-woocommerce-zoom-magnifier-premium.php:151
-msgid "Bottom"
-msgstr ""
-
-#: ../lib/class.yith-woocommerce-zoom-magnifier-premium.php:152
-msgid "Left"
-msgstr ""
-
-#: ../lib/class.yith-woocommerce-zoom-magnifier-premium.php:153
-#: ../plugin-options/general-options.php:105
-#: ../plugin-options/general-options.php:117
-msgid "Inside"
-msgstr ""
-
-#: ../lib/class.yith-ywzm-custom-types.php:180
+#: ../lib/class.yith-ywzm-custom-types.php:179
 msgid "Do you want to hard crop the image?"
 msgstr ""
 
@@ -134,38 +46,42 @@ msgid "General"
 msgstr ""
 
 #: ../lib/class.yith-ywzm-plugin-fw-loader.php:127
-#: ../lib/class.yith-ywzm-plugin-fw-loader.php:192
+#: ../lib/class.yith-ywzm-plugin-fw-loader.php:191
 msgid "Premium Version"
 msgstr ""
 
-#: ../lib/class.yith-ywzm-plugin-fw-loader.php:189
+#: ../lib/class.yith-ywzm-plugin-fw-loader.php:129
+msgid "Product exclusion list"
+msgstr ""
+
+#: ../lib/class.yith-ywzm-plugin-fw-loader.php:188
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1048
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1196
 #: ../plugin-fw/lib/yit-cpt-unlimited.php:1202
-#: ../plugin-fw/lib/yit-plugin-panel.php:62
+#: ../plugin-fw/lib/yit-plugin-panel.php:64
 msgid "Settings"
 msgstr ""
 
-#: ../lib/class.yith-ywzm-plugin-fw-loader.php:217
+#: ../lib/class.yith-ywzm-plugin-fw-loader.php:216
 msgid "Plugin Documentation"
 msgstr ""
 
-#: ../lib/class.yith-ywzm-plugin-fw-loader.php:230
+#: ../lib/class.yith-ywzm-plugin-fw-loader.php:229
 msgid ""
 "YITH WooCommerce Zoom Magnifier is available in an outstanding PREMIUM "
 "version with many new options, discover it now."
 msgstr ""
 
-#: ../lib/class.yith-ywzm-plugin-fw-loader.php:231
+#: ../lib/class.yith-ywzm-plugin-fw-loader.php:230
 msgid "Premium version"
 msgstr ""
 
-#: ../lib/class.yith-ywzm-plugin-fw-loader.php:238
-#: ../plugin-options/general-options.php:216
+#: ../lib/class.yith-ywzm-plugin-fw-loader.php:237
+#: ../plugin-options/general-options.php:214
 msgid "YITH WooCommerce Zoom Magnifier"
 msgstr ""
 
-#: ../lib/class.yith-ywzm-plugin-fw-loader.php:239
+#: ../lib/class.yith-ywzm-plugin-fw-loader.php:238
 msgid ""
 "In YIT Plugins tab you can find  YITH WooCommerce Zoom Magnifier options."
 "<br> From this menu you can access all settings of the YITH plugins "
@@ -378,82 +294,81 @@ msgstr ""
 msgid "Add with multiupload"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel-wc.php:315
+#: ../plugin-fw/lib/yit-plugin-panel-wc.php:295
 msgid "The changes you have made will be lost if you leave this page."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:61
+#: ../plugin-fw/lib/yit-plugin-panel.php:63
 msgid "Plugin Settings"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:94
+#: ../plugin-fw/lib/yit-plugin-panel.php:95
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:101
 msgid "YIT Plugins"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:273
+#: ../plugin-fw/lib/yit-plugin-panel.php:292
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:142
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:5
 msgid "Save Changes"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:276
+#: ../plugin-fw/lib/yit-plugin-panel.php:295
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:8
 msgid ""
 "If you continue with this action, you will reset all options in this page."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:278
+#: ../plugin-fw/lib/yit-plugin-panel.php:297
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
-#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
-msgid "Reset Defaults"
+msgid "Reset to Default"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:278
+#: ../plugin-fw/lib/yit-plugin-panel.php:297
 #: ../plugin-fw/lib/yit-plugin-subpanel.php:147
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
 msgid "Are you sure?"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:412
+#: ../plugin-fw/lib/yit-plugin-panel.php:431
 msgid ""
 "The element you have entered already exists. Please, enter another name."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:413
+#: ../plugin-fw/lib/yit-plugin-panel.php:432
 msgid "Settings saved"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:414
+#: ../plugin-fw/lib/yit-plugin-panel.php:433
 msgid "Settings reset"
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:415
+#: ../plugin-fw/lib/yit-plugin-panel.php:434
 msgid "Element deleted correctly."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:416
-#: ../plugin-fw/lib/yit-plugin-panel.php:417
+#: ../plugin-fw/lib/yit-plugin-panel.php:435
+#: ../plugin-fw/lib/yit-plugin-panel.php:436
 msgid "Element updated correctly."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:418
+#: ../plugin-fw/lib/yit-plugin-panel.php:437
 msgid "Database imported correctly."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:419
+#: ../plugin-fw/lib/yit-plugin-panel.php:438
 msgid "An error has occurred during import. Please try again."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:420
+#: ../plugin-fw/lib/yit-plugin-panel.php:439
 msgid "The added file is not valid."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:421
+#: ../plugin-fw/lib/yit-plugin-panel.php:440
 msgid "Sorry, import is disabled."
 msgstr ""
 
-#: ../plugin-fw/lib/yit-plugin-panel.php:422
+#: ../plugin-fw/lib/yit-plugin-panel.php:441
 msgid "Sorting successful."
 msgstr ""
 
@@ -643,72 +558,92 @@ msgstr ""
 
 #: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:23
 msgid ""
+"I cannot find the license key for activating the theme I have bought some "
+"time ago. Where can I find it?"
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:26
+msgid ""
+"If you have purchased one of our products before 27 January 2015, you can "
+"benefit from support and updates (the services offered with the license)\n"
+"            until 27 January 2016 and you do not have to purchase it again "
+"to get a new license key, because, before this date, your license used to be "
+"activated automatically by our system.\n"
+"            After 27 January 2016, instead, if you want to benefit from "
+"support and updates you have to buy a new license and activate it through "
+"the license key you will be\n"
+"            provided with and that you can find in your YIThemes account, in "
+"section \"My licenses\"."
+msgstr ""
+
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:37
+msgid ""
 "Have you updated your licenses? Have you asked for an extension? Update "
 "information concerning your products."
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:25
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:39
 msgid "Update licence information"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:35
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:49
 msgid "Products to be activated"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:54
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:68
 msgid "Activate"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:73
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:87
 msgid "Activated"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:77
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:109
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:133
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:91
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:123
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:147
 msgid "Product Name"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:78
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:110
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:134
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:145
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:337
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:92
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:124
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:148
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:148
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:340
 msgid "Email"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:79
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:111
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:135
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:93
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:125
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:149
 msgid "Licence Key"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:80
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:136
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:94
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:150
 msgid "Expires"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:81
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:95
 msgid "Remaining"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:82
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:95
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:137
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:147
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:96
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:109
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:151
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:161
 msgid "Renew"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:93
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:107
 #, php-format
 msgid "%1s out of %2s"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:105
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:119
 msgid "Banned"
 msgstr ""
 
-#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:129
+#: ../plugin-fw/licence/templates/panel/activation/activation-panel.php:143
 msgid "Expired"
 msgstr ""
 
@@ -724,208 +659,208 @@ msgstr ""
 msgid "+ Add New Category"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:5
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:7
 msgid "Text Input"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:6
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:8
 msgid "Checkbox"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:7
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:9
 msgid "Select"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:8
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:10
 msgid "Textarea"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:9
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:11
 msgid "Radio Input"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:10
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:12
 msgid "Password Field"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:11
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:13
 msgid "File Upload"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:45
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:47
 msgid "Theme Icon"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:46
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:48
 msgid "Custom Icon"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:47
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:49
 #: ../plugin-fw/templates/metaboxes/types/responsivesliders.php:24
 msgid "None"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:57
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:60
 msgid "Add field"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:66
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:258
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:69
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:261
 #: ../plugin-fw/templates/metaboxes/types/customtabs.php:37
 #: ../plugin-fw/templates/metaboxes/types/customtabs.php:82
 msgid "Remove"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:67
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:259
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:70
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:262
 msgid "Click to toggle"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:74
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:266
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:77
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:269
 msgid "Title Field"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:78
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:270
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:81
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:273
 msgid "Insert the title for the field."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:83
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:275
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:86
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:278
 msgid "Data Name"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:87
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:279
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:90
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:282
 msgid ""
 "REQUIRED: Field identification name to be entered into email body. "
 "<strong>Note:</strong>Use only lowercase characters and underscores."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:92
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:284
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:95
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:287
 msgid "Type field"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:100
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:292
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:103
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:295
 msgid "Select the type for this field."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:105
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:297
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:108
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:300
 msgid "Checked"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:109
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:301
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:112
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:304
 msgid "Select this option if you want this field appears as already checked."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:114
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:306
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:117
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:309
 msgid "Add options "
-msgstr ""
-
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:115
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:307
-msgid "Add option"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:118
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:310
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:432
-msgid "Selected"
+msgid "Add option"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:121
 #: ../plugin-fw/templates/metaboxes/types/contactform.php:313
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:432
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:436
+msgid "Selected"
+msgstr ""
+
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:124
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:316
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:436
 msgid "Delete option"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:127
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:319
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:130
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:322
 msgid "Error Message"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:131
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:323
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:134
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:326
 msgid "Insert the error message for validation."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:136
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:328
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:139
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:331
 msgid "Required"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:140
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:332
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:143
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:335
 msgid "Select this option if it must be required."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:149
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:341
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:152
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:344
 msgid "Select this option if the email must be valid."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:154
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:346
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:157
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:349
 msgid "Reply To"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:158
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:350
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:161
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:353
 msgid "Select this if it is the email you can reply to."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:163
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:355
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:166
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:358
 msgid "Class"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:167
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:359
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:170
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:362
 msgid ""
 "Insert additional class(es) (separated by commas) for more personalization."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:172
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:364
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:175
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:367
 msgid "Icon"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:200
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:388
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:203
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:391
 #: ../plugin-fw/templates/metaboxes/types/icon-list.php:69
 #: ../plugin-fw/templates/metaboxes/types/select-icon.php:33
 #: ../plugin-fw/templates/metaboxes/types/upload.php:21
 #: ../plugin-fw/templates/panel/types/upload.php:31
 #: ../plugin-fw/templates/panel/woocommerce/woocommerce-upload.php:35
-#: ../yit-common/yith-panel.php:417
+#: ../yit-common/yith-panel.php:435
 msgid "Upload"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:206
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:394
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:209
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:397
 #: ../plugin-fw/templates/metaboxes/types/icon-list.php:75
 #: ../plugin-fw/templates/metaboxes/types/select-icon.php:39
 msgid "Image preview"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:214
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:402
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:217
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:405
 msgid "Insert an icon for more personalization."
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:219
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:406
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:222
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:409
 msgid "Width"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:244
-#: ../plugin-fw/templates/metaboxes/types/contactform.php:418
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:247
+#: ../plugin-fw/templates/metaboxes/types/contactform.php:421
 msgid "Set field length."
 msgstr ""
 
@@ -965,34 +900,34 @@ msgstr ""
 msgid "(Default: <i %s></i> )"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:35
 #: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
-#: ../plugin-fw/templates/metaboxes/types/images.php:33
-#: ../plugin-fw/templates/metaboxes/types/images.php:59
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
+#: ../plugin-fw/templates/metaboxes/types/images.php:38
+#: ../plugin-fw/templates/metaboxes/types/images.php:64
 msgid "Delete image"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
 msgid "Add Images to Gallery"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
 msgid "Add to gallery"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
 msgid "Add images"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:40
+#: ../plugin-fw/templates/metaboxes/types/image-gallery.php:45
 msgid "Delete"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/images.php:37
+#: ../plugin-fw/templates/metaboxes/types/images.php:42
 msgid "Upload new images"
 msgstr ""
 
-#: ../plugin-fw/templates/metaboxes/types/images.php:70
+#: ../plugin-fw/templates/metaboxes/types/images.php:75
 msgid "Are you sure you want to remove this image?"
 msgstr ""
 
@@ -1027,22 +962,22 @@ msgid "Right Sidebar"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:42
-#: ../yit-common/yith-panel.php:444
+#: ../yit-common/yith-panel.php:472
 msgid "px"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:43
-#: ../yit-common/yith-panel.php:445
+#: ../yit-common/yith-panel.php:474
 msgid "em"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:44
-#: ../yit-common/yith-panel.php:446
+#: ../yit-common/yith-panel.php:476
 msgid "pt"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:45
-#: ../yit-common/yith-panel.php:447
+#: ../yit-common/yith-panel.php:478
 msgid "rem"
 msgstr ""
 
@@ -1057,28 +992,32 @@ msgid "Google fonts"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:96
-#: ../yit-common/yith-panel.php:465
+#: ../yit-common/yith-panel.php:500
 msgid "Regular"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:97
-#: ../yit-common/yith-panel.php:466
+#: ../yit-common/yith-panel.php:502
 msgid "Bold"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:98
-#: ../yit-common/yith-panel.php:467
+#: ../yit-common/yith-panel.php:504
 msgid "Extra bold"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:99
-#: ../yit-common/yith-panel.php:468
+#: ../yit-common/yith-panel.php:506
 msgid "Italic"
 msgstr ""
 
 #: ../plugin-fw/templates/metaboxes/types/typography.php:100
-#: ../yit-common/yith-panel.php:469
+#: ../yit-common/yith-panel.php:508
 msgid "Italic bold"
+msgstr ""
+
+#: ../plugin-fw/templates/panel/woocommerce/woocommerce-form.php:10
+msgid "Reset Defaults"
 msgstr ""
 
 #: ../plugin-options/general-options.php:16
@@ -1098,187 +1037,190 @@ msgid "Activate the plugin or use the WooCommerce default product image."
 msgstr ""
 
 #: ../plugin-options/general-options.php:50
-msgid "Activate on mobile device"
+msgid "Activate the plugin on mobile device"
 msgstr ""
 
-#: ../plugin-options/general-options.php:51
-msgid ""
-"Set if zoom and slider functionalities should be shown also on mobile "
-"devices."
-msgstr ""
-
-#: ../plugin-options/general-options.php:59
+#: ../plugin-options/general-options.php:57
 msgid "Forced Image Size"
 msgstr ""
 
-#: ../plugin-options/general-options.php:60
+#: ../plugin-options/general-options.php:58
 msgid ""
 "If disabled, you will able to customize the sizes of the zoomed images. "
 "Disable it at your own risk; the magnifier could not properly work with "
 "images out of proportion."
 msgstr ""
 
-#: ../plugin-options/general-options.php:74
+#: ../plugin-options/general-options.php:72
 msgid "Magnifier Settings"
 msgstr ""
 
-#: ../plugin-options/general-options.php:80
+#: ../plugin-options/general-options.php:78
 msgid "Zoom Box Width"
 msgstr ""
 
-#: ../plugin-options/general-options.php:81
+#: ../plugin-options/general-options.php:79
 msgid "The width of the magnifier box (default: auto)"
 msgstr ""
 
-#: ../plugin-options/general-options.php:88
+#: ../plugin-options/general-options.php:86
 msgid "Zoom Box Height"
 msgstr ""
 
-#: ../plugin-options/general-options.php:89
+#: ../plugin-options/general-options.php:87
 msgid "The height of the magnifier box (default: auto)"
 msgstr ""
 
-#: ../plugin-options/general-options.php:97
+#: ../plugin-options/general-options.php:95
 msgid "Zoom Box Position"
 msgstr ""
 
-#: ../plugin-options/general-options.php:98
+#: ../plugin-options/general-options.php:96
 msgid "The magnifier position"
 msgstr ""
 
-#: ../plugin-options/general-options.php:109
+#: ../plugin-options/general-options.php:102
+msgid "Right"
+msgstr ""
+
+#: ../plugin-options/general-options.php:103
+#: ../plugin-options/general-options.php:115
+msgid "Inside"
+msgstr ""
+
+#: ../plugin-options/general-options.php:107
 msgid "Zoom Box Position for mobile devices"
 msgstr ""
 
-#: ../plugin-options/general-options.php:110
+#: ../plugin-options/general-options.php:108
 msgid "The magnifier position for the mobile devices (iPhone, Android, etc.)"
 msgstr ""
 
-#: ../plugin-options/general-options.php:116
+#: ../plugin-options/general-options.php:114
 msgid "Default"
 msgstr ""
 
-#: ../plugin-options/general-options.php:118
+#: ../plugin-options/general-options.php:116
 msgid "Disable"
 msgstr ""
 
-#: ../plugin-options/general-options.php:122
+#: ../plugin-options/general-options.php:120
 msgid "Loading label"
 msgstr ""
 
-#: ../plugin-options/general-options.php:125
-#: ../plugin-options/general-options.php:126
+#: ../plugin-options/general-options.php:123
+#: ../plugin-options/general-options.php:124
 msgid "Loading..."
 msgstr ""
 
-#: ../plugin-options/general-options.php:130
+#: ../plugin-options/general-options.php:128
 msgid "Lens Opacity"
 msgstr ""
 
-#: ../plugin-options/general-options.php:141
+#: ../plugin-options/general-options.php:139
 msgid "Blur"
 msgstr ""
 
-#: ../plugin-options/general-options.php:142
+#: ../plugin-options/general-options.php:140
 msgid "Add a blur effect to the small image on mouse hover."
 msgstr ""
 
-#: ../plugin-options/general-options.php:153
+#: ../plugin-options/general-options.php:151
 msgid "Slider Settings"
 msgstr ""
 
-#: ../plugin-options/general-options.php:159
+#: ../plugin-options/general-options.php:157
 msgid "Activate Slider"
 msgstr ""
 
-#: ../plugin-options/general-options.php:160
+#: ../plugin-options/general-options.php:158
 msgid "Activate Thumbnail Slider."
 msgstr ""
 
-#: ../plugin-options/general-options.php:167
+#: ../plugin-options/general-options.php:165
 msgid "Activate Responsive Slider"
 msgstr ""
 
-#: ../plugin-options/general-options.php:168
+#: ../plugin-options/general-options.php:166
 msgid ""
 "This option fits the thumbnails within the available space. Disable it if "
 "you want to manage freely the thumbnails (eg. add margins, paddings, etc.)"
 msgstr ""
 
-#: ../plugin-options/general-options.php:175
+#: ../plugin-options/general-options.php:173
 msgid "Items"
 msgstr ""
 
-#: ../plugin-options/general-options.php:176
+#: ../plugin-options/general-options.php:174
 msgid "Number of items to show"
 msgstr ""
 
-#: ../plugin-options/general-options.php:186
+#: ../plugin-options/general-options.php:184
 msgid "Circular carousel"
 msgstr ""
 
-#: ../plugin-options/general-options.php:187
+#: ../plugin-options/general-options.php:185
 msgid "It defines whether the carousel should be circular."
 msgstr ""
 
-#: ../plugin-options/general-options.php:194
+#: ../plugin-options/general-options.php:192
 msgid "Infinite carousel"
 msgstr ""
 
-#: ../plugin-options/general-options.php:195
+#: ../plugin-options/general-options.php:193
 msgid ""
 "It defines whether the carousel should be infinite. Note: It is possible to "
 "create a non-circular, infinite carousel, but it is not possible to create a "
 "circular, non-infinite carousel."
 msgstr ""
 
-#: ../plugin-options/general-options.php:213
+#: ../plugin-options/general-options.php:211
 msgid "Upgrade to the PREMIUM VERSION"
 msgstr ""
 
-#: ../plugin-options/general-options.php:217
+#: ../plugin-options/general-options.php:215
 msgid "Discover The Advanced Features"
 msgstr ""
 
-#: ../plugin-options/general-options.php:218
+#: ../plugin-options/general-options.php:216
 msgid ""
 "Upgrade to the PREMIUM VERSION of YITH WOOCOMMERCE ZOOM MAGNIFIER to benefit "
 "from all features!"
 msgstr ""
 
-#: ../plugin-options/general-options.php:222
+#: ../plugin-options/general-options.php:220
 msgid ""
 "See YITH WooCommerce Zoom Magnifier plugin with full premium features in "
 "action"
 msgstr ""
 
-#: ../plugin-options/general-options.php:224
+#: ../plugin-options/general-options.php:222
 msgid "Get Support and Pro Features"
 msgstr ""
 
-#: ../plugin-options/general-options.php:225
+#: ../plugin-options/general-options.php:223
 msgid ""
 "Purchasing the premium version of the plugin, you will take advantage of the "
-"advanced features of the product, and you will get one year of free updates "
+"advanced features of the product and you will get one year of free updates "
 "and support through our platform available 24h/24."
 msgstr ""
 
-#: ../yit-common/yith-panel.php:406
+#: ../yit-common/yith-panel.php:424
 msgid "Select a date"
 msgstr ""
 
-#: ../yit-common/yith-panel.php:407
+#: ../yit-common/yith-panel.php:425
 msgid "Hours"
 msgstr ""
 
-#: ../yit-common/yith-panel.php:408 ../yit-common/yith-panel.php:409
+#: ../yit-common/yith-panel.php:426 ../yit-common/yith-panel.php:427
 msgid "Minutes"
 msgstr ""
 
-#: ../yit-common/yith-panel.php:457
+#: ../yit-common/yith-panel.php:490
 msgid "Select a font family"
 msgstr ""
 
-#: ../yit-common/yith-panel.php:481
+#: ../yit-common/yith-panel.php:524
 msgid "Click to preview"
 msgstr ""
