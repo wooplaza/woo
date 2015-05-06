@@ -1,5 +1,15 @@
 # Storefront Changelog
 
+### *2015.04.23* - 1.4.4
+* **Fix** - Post author styles applied to incorrect child comments. Props @ibndawood.
+* **Fix** - Third level dropdowns (and beyond) are now revealed in the correct situation.
+* **Fix** - Header margin on homepage template when WooCommerce isn't activated.
+* **Fix** - Dropdowns on touch devices.
+* **Fix** - Pagination hidden correctly when only displaying categories / subcategories.
+* **Tweak** - Output WooCommerce messages on all appropriate pages.
+* **Tweak** - Revamped 'Enhance' section of welcome screen.
+* **Localisation** - Translation files are now included.
+
 ### *2015.04.08* - 1.4.3
 * **Fix** - Star rating display in Safari.
 * **Tweak** - Cart dropdown appears on focus.

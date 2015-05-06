@@ -13,7 +13,7 @@ global $optimizer;
 
 <?php get_header(); ?>
 
-<?php if ( is_home() ) { ?>
+<?php if ( is_front_page() ) { ?>
 <div class="home_wrap layer_wrapper">
 	<div class="fixed_wrap fixindex">
 
@@ -30,7 +30,7 @@ foreach ($home_blocks as $key=>$value) {
     case 'about':
     ?>
     <?php $about = $optimizer['home_sort_id']; if(!empty($about['about'])){ ?>
-    	<div id="front_about" class="home_blocks aboutblock"><?php get_template_part('frontpage/content','about'); ?></div>
+    	<div class="home_blocks aboutblock"><?php get_template_part('frontpage/content','about'); ?></div>
 	<?php } ?>
     
     <?php
@@ -39,7 +39,7 @@ foreach ($home_blocks as $key=>$value) {
     case 'welcome-text':
     ?>
     <?php $welcome = $optimizer['home_sort_id']; if(!empty($welcome['welcome-text'])){ ?>
-    	<div id="front_welcome" class="home_blocks welcmblock"><?php get_template_part('frontpage/content','welcome-text'); ?></div>
+    	<div class="home_blocks welcmblock"><?php get_template_part('frontpage/content','welcome-text'); ?></div>
     <?php } ?>
     
     <?php
@@ -48,7 +48,7 @@ foreach ($home_blocks as $key=>$value) {
     case 'blocks':
     ?>
     <?php $blocks = $optimizer['home_sort_id']; if(!empty($blocks['blocks'])){ ?>
-		<div id="front_blocks" class="home_blocks ast_blocks"><?php get_template_part('frontpage/content','blocks'); ?></div>
+		<div class="home_blocks ast_blocks"><?php get_template_part('frontpage/content','blocks'); ?></div>
     <?php } ?>
     
     <?php
@@ -57,7 +57,7 @@ foreach ($home_blocks as $key=>$value) {
     case 'posts':
     ?>
     	<?php $homeposts = $optimizer['home_sort_id']; if(!empty($homeposts['posts'])){ ?>
-            <div id="front_posts" class="home_blocks postsblck <?php if(!empty($optimizer['hide_mob_frontposts'])){ echo 'mobile_hide_posts';} ?>">
+            <div class="home_blocks postsblck <?php if(!empty($optimizer['hide_mob_frontposts'])){ echo 'mobile_hide_posts';} ?>">
             <!--Latest Posts-->
 				  <?php if('product' == $optimizer['n_posts_type_id']){ ?>
                       <?php get_template_part('template_parts/post','woo'); ?>
@@ -86,7 +86,7 @@ endif;
 <?php }else{ ?>
 <div class="fixed_site">
 	<div class="fixed_wrap fixindex">
-	<?php get_template_part('template_parts/post','layout'.absint($optimizer['front_layout_id']).''); ?> 
+	<?php get_template_part('template_parts/post','layout4'); ?> 
 	</div>
 </div>
 <?php } ?>

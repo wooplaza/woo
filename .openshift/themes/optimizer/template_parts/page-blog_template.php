@@ -29,7 +29,7 @@ Template Name: Blog Page Template
     <div class="lay4">
         <div class="center">
         
-            <div class="lay4_wrap">
+            <div class="lay4_wrap<?php if ( !is_active_sidebar( 'sidebar' ) ) { ?> no_sidebar<?php } ?>">
                 <div class="lay4_inner">
 
                       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>

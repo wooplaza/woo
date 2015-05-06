@@ -32,9 +32,9 @@ $optimizer = get_option( 'optimizer', optimizer_option_defaults() );
 </div><!--layer_wrapper class END-->
 
 	<!--Slider START-->
-		<?php if (is_home() ) { ?>
+		<?php if (is_home() && is_front_page()) { ?>
         
-            <div id="slidera" class="layer_wrapper <?php if(!empty($optimizer['hide_mob_slide'])){ echo 'mobile_hide_slider';} ?>">
+            <div id="slidera" class="layer_wrapper <?php if(!empty($optimizer['hide_mob_slide'])){ echo 'mobile_hide_slide';} ?>">
                 <?php $slidertype = $optimizer['slider_type_id']; ?>
                 <?php get_template_part('frontpage/slider',''.$slidertype.''); ?>
             </div> 

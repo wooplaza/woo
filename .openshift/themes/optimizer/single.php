@@ -6,7 +6,7 @@
 	<div id="content">
 		<div class="center">
            <!--POST START-->
-			<div class="single_wrap">
+			<div class="single_wrap<?php if ( !is_active_sidebar( 'sidebar' ) ) { ?> no_sidebar<?php } ?>">
 				<div class="single_post">
 
                    <?php if(have_posts()): ?><?php while(have_posts()): ?><?php the_post(); ?>

@@ -13,7 +13,7 @@ global $optimizer;?>
     <div class="lay4">
         <div class="center">
         <?php /* If homepage Display the Title */?>
-        <?php if ( is_home() ) { ?>
+        <?php if (is_home() && is_front_page()) { ?>
             <div class="homeposts_title">
             	<?php if($optimizer['posts_title_id']) { ?><h2 class="home_title"><?php echo do_shortcode($optimizer['posts_title_id']); ?></h2><?php }?>
                 <?php if($optimizer['posts_subtitle_id']) { ?><div class="home_subtitle"><?php echo do_shortcode(esc_textarea(($optimizer['posts_subtitle_id']))); ?></div><?php }?>

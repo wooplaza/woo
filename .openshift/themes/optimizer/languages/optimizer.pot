@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Optimizer\n"
-"POT-Creation-Date: 2015-04-05 05:06+0600\n"
-"PO-Revision-Date: 2015-04-05 05:06+0600\n"
+"POT-Creation-Date: 2015-04-28 17:43+0600\n"
+"PO-Revision-Date: 2015-04-28 17:46+0600\n"
 "Last-Translator: \n"
 "Language-Team: Layerthemes\n"
 "MIME-Version: 1.0\n"
@@ -564,6 +564,12 @@ msgstr ""
 msgid "Setup Contact Page Email address"
 msgstr ""
 
+msgid "Custom Page Header"
+msgstr ""
+
+msgid "Set Custom Page header for each page"
+msgstr ""
+
 msgid "Color & Font"
 msgstr ""
 
@@ -809,6 +815,9 @@ msgstr ""
 msgid "Find Us on Google Plus"
 msgstr ""
 
+msgid "Find Us on Pinterest"
+msgstr ""
+
 msgid ""
 "<p><a class=\"doc_link\" href=\"https://www.layerthemes.com/optimizer-"
 "documentation/\" target=\"_blank\">Documentation</a><a class=\"pro_link\" "
@@ -979,9 +988,6 @@ msgstr ""
 msgid ""
 "Lots of features for customizing the header of your site. Make the header "
 "transparent,stick the header to top, upload your own logo and many more."
-msgstr ""
-
-msgid "Custom Page Header"
 msgstr ""
 
 msgid ""

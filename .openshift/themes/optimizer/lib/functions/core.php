@@ -14,12 +14,15 @@ function optimizer_home_query($query) {
 
     if( $query->is_main_query() && $query->is_home() ) {
 		global $optimizer;
-		$postype = $optimizer['n_posts_type_id'];
-		set_query_var( 'post_type', ''.$postype.'');
-		set_query_var( 'paged', ( get_query_var('paged') ? get_query_var('paged') : 1) );
-		$postcount = $optimizer['n_posts_field_id'];
-				set_query_var( 'posts_per_page', ''.absint($postcount).'' );
-		
+		if(!empty($optimizer['n_posts_type_id'])){
+			$postype = $optimizer['n_posts_type_id'];
+			set_query_var( 'post_type', ''.$postype.'');
+		}
+		if(!empty($optimizer['n_posts_field_id'])){
+			$postcount = $optimizer['n_posts_field_id'];
+			set_query_var( 'paged', ( get_query_var('paged') ? get_query_var('paged') : 1) );
+			set_query_var( 'posts_per_page', ''.absint($postcount).'' );
+		}
 		if(!empty($optimizer['posts_cat_id'])){
 			$postcat = $optimizer['posts_cat_id'];
 			set_query_var( 'cat', ''.implode(',', $postcat).'' );
@@ -93,17 +96,18 @@ function optimizer_placeholder_image(){
 function optimizer_gallery_thumb(){
  	global $post;
  	// Make sure the post has a gallery in it
- 	if( has_shortcode( $post->post_content, 'gallery' ) )
+ 	if( has_shortcode( $post->post_content, 'gallery' ) ){
 
- 	$gallery = get_post_gallery( get_the_ID(), false );
-	$ids = explode( ",", $gallery['ids'] );
-
-	foreach( $ids as $id ) {
-	   $imgurl   = wp_get_attachment_image_src( $id, array(400,270) );
-	} 
-
-	$first_thumb = $imgurl[0];
- 	return $first_thumb;
+		$gallery = get_post_gallery( get_the_ID(), false );
+		$ids = explode( ",", $gallery['ids'] );
+	
+		foreach( $ids as $id ) {
+		   $imgurl   = wp_get_attachment_image_src( $id, array(400,270) );
+		} 
+	
+		$first_thumb = $imgurl[0];
+		return $first_thumb;
+	}
  }
 
 // force the link='file' gallery shortcode attribute:
@@ -200,5 +204,24 @@ $GLOBALS['comment'] = $comment; ?>
      </div>
      </div>
      
-     
+
 <?php }
+
+
+//COMMENT FORM DEFAULT FIELDS
+function optimizer_comment_form_fields($fields){
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
+    global $optimizer;
+	
+	$fields['author'] = '<div class="comm_wrap"><p class="comment-form-author"><input placeholder="' . __( 'Name', 'optimizer' ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .'" size="30"' . $aria_req . ' /></p>';
+
+	$fields['email'] = '<p class="comment-form-email"><input placeholder="' . __( 'Email', 'optimizer' ) . '" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .'" size="30"' . $aria_req . ' /></p>';
+
+	$fields['url'] = '<p class="comment-form-url"><input placeholder="' . __( 'Website', 'optimizer' ) . '" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .'" size="30" /></p></div>';
+    return $fields;
+}
+
+add_filter('comment_form_default_fields','optimizer_comment_form_fields');
+

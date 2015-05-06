@@ -66,3 +66,6 @@ SmoothScroll for websites v1.2.1
 https://gist.github.com/galambalazs/6477177/
 Licensed under the terms of the MIT license.
 
+Jquery matchHeight
+http://brm.io/jquery-match-height/
+Licensed under the terms of the MIT license.

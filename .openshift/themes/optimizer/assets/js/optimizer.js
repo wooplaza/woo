@@ -42,7 +42,9 @@ jQuery(window).ready(function() {
 	}
 
 	//BLOCKS Equal height
-	jQuery('.mid_block_content').equalHeights();
+	jQuery('.block_type1 .midrow_blocks_wrap').waitForImages(function() {
+		jQuery('.mid_block_content').matchHeight();
+	});
 	
 	//Layout1 Animation
 	var divs = jQuery(".lay1 .hentry");
@@ -76,28 +78,22 @@ jQuery(window).ready(function() {
 	  return false;
 	});
 
-
-
 	//Hide Homepage Elemnts if empty
 	jQuery('.home_blocks').each(function () {
 		if(jQuery(this).html().length > 3) {
 			jQuery(this).addClass('activeblock');
 			}
 	});
+	jQuery('.lay1, .lay2, .lay3, .lay4, .lay5, .lay6').not(':has(.hentry), :has(.type-product)').css({"display":"none"});
 
 
-	jQuery('.lay1, .lay2, .lay3, .lay4, .lay5, .lay6').not(':has(.hentry)').css({"display":"none"});
-	
-
-
-if (jQuery(window).width() > 768) {	
 	//STATIC SLIDER IMAGE FIXED
 	jQuery('.stat_has_img').waitForImages(function() {
 		var statimg = jQuery(".stat_has_img .stat_bg_img").attr('src');
 		var statimgheight = jQuery(".stat_has_img .stat_bg_img").height();
 		var hheight = jQuery(".header").height();
 		jQuery("body.home").prepend('<div class="stat_bg" style="background-image:url('+statimg+'); height:'+statimgheight+'px" /><div class="stat_bg_overlay overlay_off" style="height:'+statimgheight+'px" />');
-		jQuery('.home.has_trans_header .stat_content').animate({ 'marginTop':'-'+hheight+'px'});
+		jQuery('#slidera').css({"minHeight":"initial"});
 		
 		//Static Slider Fade on scroll
 		jQuery('.home .stat_has_img').waypoint(function() {
@@ -114,7 +110,18 @@ if (jQuery(window).width() > 768) {
 		  jQuery(".is-sticky .header").removeClass("headcolor");
 		}, { offset: '-90px' });
 	});	
-}
+	jQuery('.stat_has_img').waitForImages(function() {
+		var resizeTimer;
+		jQuery(window).resize(function() {
+		  clearTimeout(resizeTimer);
+		  resizeTimer = setTimeout(function() {
+			var body_size = jQuery('.stat_has_img .stat_bg_img').height();
+			jQuery('#stat_img, .stat_bg').height(body_size);
+		  }, 50);
+		});
+	});
+	
+
 
 jQuery(window).bind("load resize", function() {
 	if (jQuery(window).width() <= 480) {	
@@ -122,6 +129,15 @@ jQuery(window).bind("load resize", function() {
 		jQuery('.stat_content_inner').waitForImages(function() { jQuery("#stat_img").height(jQuery(".stat_content_inner").height());  });
 		var statbg = jQuery(".stat_bg_img").attr('src');
 		jQuery("#stat_img").css({"background":"url("+statbg+")", "background-repeat":"no-repeat", "background-size":"cover"});
+	}
+	if (jQuery(window).width() <= 960 <= 480) {	
+		var statbg = jQuery(".stat_bg_img").attr('src');
+		jQuery("#stat_img").css({"background":"url("+statbg+") top center", "background-repeat":"no-repeat", "background-size":"cover"});
+		jQuery('.has_trans_header .stat_content_inner, .has_trans_header .header').waitForImages(function() { 
+			var mhheight = jQuery(".has_trans_header .header").height();
+			jQuery(".has_trans_header .stat_content_inner").css({"paddingTop":mhheight});
+			
+		});
 	}
 });
 //WAYPOINT ANIMATIONS
@@ -188,7 +204,8 @@ if (jQuery(window).width() > 480) {
 	var padmenu = jQuery("#simple-menu").html();
 	jQuery('#simple-menu').sidr({
       name: 'sidr-main',
-      source: '#topmenu'
+      source: '#topmenu',
+	  side: 'right'
     });
 	jQuery(".sidr").prepend("<div class='pad_menutitle'>"+padmenu+"<span><i class='fa-times'></i></span></div>");
 	
@@ -197,6 +214,12 @@ if (jQuery(window).width() > 480) {
 		preventDefaultEvents: false;
 		
 	});
+	//If the topmenu is empty remove it
+	if (jQuery(window).width() < 1025) {
+		if(jQuery("#topmenu:has(ul)").length == 0){
+			jQuery('#simple-menu').addClass('hide_mob_menu');
+		}
+	}
 
 
 //NivoSlider Navigation Bug Fix
@@ -247,7 +270,14 @@ if (jQuery(window).width() < 480) {
 	
 	//Next-Previous Post Image Check
 	jQuery(".nav-box.ast-prev, .nav-box.ast-next").not(":has(img)").addClass('navbox-noimg');
+	
 	//Hide Footer if Empty
 	jQuery(".foot_soc").not(":has(i)").addClass('hide_footsoc');
 	
+	//Make sure the footer always stays to the bottom of the page when the page is short
+	var docHeight = jQuery(window).height();
+	var footerHeight = jQuery('#footer').height();
+	var footerTop = jQuery('#footer').position().top + footerHeight;
+	   
+	if (footerTop < docHeight) {  jQuery('#footer').css('margin-top', 1 + (docHeight - footerTop) + 'px');  }
 });

@@ -161,7 +161,7 @@ span.sdate {font-size: 14px;font-weight: bold;text-transform: uppercase;}
 .sidr ul li ul li:last-child{border-bottom:none}
 .sidr ul li ul li a,.sidr ul li ul li span{color:rgba(255,255,255,0.8);padding-left:30px}
 .sidr ul li .sidr-class-menu_desc{ display:none;}
-
+body.sidr-open {position: fixed !important;}
 /*
 ------------------------------------
 			 10. PACE PLUGIN

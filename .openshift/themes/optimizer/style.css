@@ -1,7 +1,7 @@
 /*
 Theme Name: Optimizer
 Description:The Optimizer, an easy to customizable multi-purpose theme with lots of powerful features. This theme lets you customize each element without you having to touch any code. The theme comes with 2 site layout: Full width & boxed, Beautiful image slider, easy Logo upload, 600+ Fonts, powerful theme options, Custom CSS Field & lots of Color options. The optimizer is 100% responsive built with HTML5 & CSS3, it's SEO friendly, mobile optimized & retina ready. Its translation ready, ready for WooCommerce, bbPress, Mailchimp, Contact Form 7. The theme is rigorously tested and optimized for speed and faster page load time and has secure and clean code. It's perfect for any types of website - Landing Pages, small business, portfolio, photography, corporate, personal & eCommerce websites.
-Version: 0.2.0
+Version: 0.2.2
 Theme URI: https://www.layerthemes.com/theme/optimizer
 Author: Layerthemes
 Author URI: https://www.layerthemes.com/
@@ -26,7 +26,7 @@ span.div_right { width: 45px; float: left; height: 1px; background: #999;}
 span.div_middle {  float: left; margin: 10px; margin-top: -10px;}
 span.div_middle .fa-heart{font-size: 14px;}
 span.div_middle .fa-bolt{font-size: 18px;}
-span.div_middle .fa-stop{font-size: 14px;transform: rotate(45deg); -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg);}
+span.div_middle .fa-stop{font-size: 14px;transform: rotate(45deg); -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg);position: relative;top: -5px;}
 span.div_middle i.fa-minus {width: 6px;position: relative;top: -5px;transform: rotate(117deg); -webkit-transform: rotate(117deg); -moz-transform: rotate(117deg);}
 
 
@@ -37,7 +37,7 @@ span.div_middle i.fa-minus {width: 6px;position: relative;top: -5px;transform: r
 
 
 /*LOGO*/
-.logo{ float:left;}
+.logo{ float:left;max-width:100%;}
 .logo h1, .logo h2{ float:left; font-size:44px; margin:12px 0; margin-bottom:0;}
 .logo h1 a, .logo h2 a{ font-weight:bold;}
 .logo img{ border:none; margin:10px 0;max-width:100%; height:auto;}
@@ -73,7 +73,7 @@ span.desc{ display:block; clear:both; font-size:14px; font-size:11px;opacity: 0.
 #topmenu ul li a, #topmenu ul li ul li{-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;transition:all 0.2s ease-out;}
 
 
-#topmenu ul li ul{ display:none; background: rgba(0, 0, 0, 0.5);position: absolute;width: 200px;z-index: 9999999; margin-top:12px;margin-left:-50px;}
+#topmenu ul li ul{ display:none; background: rgba(0, 0, 0, 0.5)!important;position: absolute;width: 200px;z-index: 9999999; margin-top:12px;margin-left:-50px;}
 #topmenu ul li ul {  -webkit-animation-duration: 0.4s; -moz-animation-duration: 0.4s;animation-duration: 0.4s;}
 #topmenu .menushow{ display:block;}
 #topmenu ul li ul li{ margin:0; padding:0; width:100%; display:block; text-align:center;}
@@ -133,28 +133,7 @@ span.menu_desc {display: block;padding-top: 5px;}
 .logo_middle #topmenu {float: left;margin-top: 0;width: 100%;text-align: center;padding-bottom: 30px;}
 .logo_middle #topmenu .logo{ display:inline-block; margin:0 40px; float:none;top: 15px;position: relative;}
 .sidr-class-logo{ display:none;}
-/*MEGA MENU*/
-.megamenu{}
-#topmenu .menu-header li.megamenu> a{padding-bottom:33px!important;}
-#topmenu .menu-header li.megamenu ul li a{ width:auto;}
-#topmenu .menu-header li.megamenu ul li a:hover{ background:none; opacity:0.7; }
-#topmenu .menu-header li.megamenu ul li ul{ display:block; position:relative;padding: 0;}
-#topmenu .menu-header li.megamenu ul li{ text-align:left;width: 200px;  float:left;margin: 25px;}
-#topmenu .menu-header li.megamenu ul li ul{ left:auto; margin-top:10px;margin-left: 0px;border-top:1px solid rgba(255, 255, 255, 0.3)!important;opacity: 1!important;}
-#topmenu .menu-header li.megamenu ul{ width:auto; margin-left:0;}
-#topmenu .menu-header li.megamenu{position:initial;}
-#topmenu .menu-header li.megamenu > ul{ padding:15px 30px; right:0; border-top:1px solid rgba(0, 0, 0, 0.07)!important;width: 80%!important;left: 0;margin:0px auto!important;background: rgba(0, 0, 0, 0.8);}
-.is_boxed #topmenu .menu-header li.megamenu > ul{ width:100%!important; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
-#topmenu .menu-header li.megamenu.menu_hover ul li a{color:#fff!important;}
-#topmenu .menu-header li.megamenu ul li a{ padding:0;}
-#topmenu .menu-header li.megamenu ul>li>a {padding-bottom: 10px;}
-#topmenu .menu-header li.megamenu > ul > li > a:hover{ background:none;}
-#topmenu .menu-header li.megamenu ul li ul li a {padding: 10px 0;width: 100%; opacity:1;font-size: 13px!important;line-height: 19px;}
-#topmenu .menu-header li.megamenu ul li ul li{ margin:0;padding: 0;}
-#topmenu .menu-header li.megamenu ul li ul li:first-child {margin-top: 15px;}
-#topmenu .menu-header li.megamenu ul li ul li.menu-item-has-children{margin-top: 40px;}
-#topmenu .menu-header li.megamenu  ul li ul{right: auto;}
-#topmenu .menu-header li.megamenu ul>li.zn_parent_menu>a {font-weight: bold;font-size: 0.9em!important;}
+
 
 #topmenu li.menu_highlight{}
 #topmenu li.menu_highlight_slim{}
@@ -244,9 +223,9 @@ top: -3px;}
 .prog_wrap{width: 50px; height:50px; position:absolute; overflow:hidden;border-radius: 3px;}
 .pbar{ -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; width:40px; padding-top:13px; height: 27px; border:5px solid #fff; text-align:center; font-size:12px; color:#fff; position:relative; z-index:22;font-weight: bold;font-family: sans-serif;box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);}
 
-#slidera{width:100%; margin:0 auto;float: left;}
+#slidera{width:100%; margin:0 auto;float: left; background: rgba(0, 0, 0, 0.3);}
 .slider-wrapper{ position:relative; }
-
+.selected_stat{min-height:500px; }
 
 
 /*Nivo Slider*/
@@ -368,7 +347,7 @@ video#bgvid {position: relative; right: 0; bottom: 0;min-width: 100%; min-height
 
 
 .midrow_block h3{ font-size: 0.9em;}
-.midrow_block p{ line-height:1.8em;}
+.midrow_block .block_content{ line-height:1.8em;}
 .midrow a:hover {font-weight: bold;}
 .block_img{}
 
@@ -661,7 +640,7 @@ span.widget_border {width: 35px;height: 2px;display: block;margin-bottom: 20px;}
 /*Page Templates*/
 
 /*Search*/
-.search_term {width: 96%;padding: 2%;float: left;background: white;margin-top: 50px;text-align: center;}
+.search_term {width: 96%;padding: 2%;float: left;margin-top: 50px;text-align: center;}
 .search_term h2{ margin-bottom:5px;}
 .search_term #searchform #s, .error_msg #searchform #s{font-size:16px;border: none;-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;width: 70%;padding: 20px;margin-top: 30px;margin-bottom: 30px;background: rgba(0, 0, 0, 0.04); color:#999;}
 .search_term #searchsubmit, .error_msg #searchsubmit{ padding:20px 15px;font-size: 16px;font-weight: bold;cursor:pointer;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;transition:all 0.2s ease-out;}
@@ -793,6 +772,7 @@ div#container {width: 70%;float: left;}
 @media screen and (max-width: 1024px){
 	#topmenu{ display:none;}
 	#simple-menu{ display:block;}
+	#simple-menu.hide_mob_menu{ display:none;}
 	.center{ width:95%!important; }
 	.ast_row{ max-height:210px;}
 	.lts_layout1 div.listing-item{ max-height:200px; overflow:hidden;}
@@ -815,11 +795,14 @@ div#container {width: 70%;float: left;}
 	.share_foot.share_pos_left{margin-left: -55px;}
 }
 
-@media screen and (max-width: 768px){
-	.home .stat_has_img .stat_bg_img{ opacity:1;}
+@media screen and (max-width: 960px){
+	.stat_bg, .stat_bg_overlay{ display: none;}
+	.home .stat_has_img .stat_bg_img{ display: none;}
 	.midrow_wrap{ width:95%;}
-	#slidera .nivoSlider img, .stat_has_img .stat_bg_img{ width:150%!important; max-width:150%!important;}
-	#zn_nivo, #slidera .slider-wrapper, .slide_wrap{ height:auto!important;}
+	.selected_stat{min-height: initial;}
+	.stat_has_img{ width:100%; float:left;}
+	.stat_has_img .stat_content_inner{ position:relative;}
+	#slidera .nivoSlider img, .stat_has_img .stat_bg_img{ width:100%!important; max-width:100%!important;}
 	.nivoinner p{ display:none;}
 	
 	.lay1 h2.postitle a{ font-size:18px!important;}
@@ -863,15 +846,21 @@ div#container {width: 70%;float: left;}
 .page_contact_wrap.layer_wrapper.has_contact_map .entry-content{ position:relative;width: 99%; z-index:inherit; bottom:auto; right:auto; margin-bottom:30px;}
 .page_contact_wrap.layer_wrapper.has_contact_map #asthemap{ height:350px;}
 }
-@media screen and (max-width: 768px) and (min-width: 481px){
+@media screen and (max-width: 960px) and (min-width: 481px){
+	.stat_has_img{ height:auto!important;}
 	.lay1 .post_image .img_hover .icon_wrap{ display:none;}
-	}
+}
+@media screen and (min-width: 961px){
+	#stat_img{ background:none!important;}
+}
 @media screen and (max-width: 480px){
-#stat_img{ height:auto!important;}
 body .header_wrap .header { position: relative!important; }
 .site_boxed .header_wrap .header { max-width: 100%!important; }
 #simple-menu{  text-shadow:0 0 2px rgba(0, 0, 0, 0.3); z-index:999;  top:5px; right:12px;}
 .to_top{ left:20px; right:auto;}
+
+.mobile_hide_footwdgt, .mobile_hide_slide, .mobile_hide_frontposts, .mobile_hide_frontposts, .mobile_hide_about, .mobile_hide_blocks, .mobile_hide_clients, .mobile_hide_frontwdgt, .mobile_hide_map, .mobile_hide_newsletter, .mobile_hide_testi, .mobile_hide_welcm, .mobile_hide_frontposts{ display:none!important;}
+	
 
 .aboutblock{padding: 40px 0px;}
 body #accordion h3 a, body #zn_nivo h3 a{ font-size:24px!important; }
@@ -880,10 +869,10 @@ body #accordion h3 a, body #zn_nivo h3 a{ font-size:24px!important; }
 .slide_wrap .nivo-directionNav{ display:none;}
 .slide_wrap{ background:none;}
 #slidera .nivoSlider img, .stat_has_img .stat_bg_img {width: 200%!important;max-width: 200%!important;}
+
+#stat_img{height: auto!important;}
 .stat_has_img .stat_bg_img{height: 100%;}
 .stat_content_inner{ bottom:0;}
-
-
 body .stat_content_inner .center{width: 92%!important;}
 
 
@@ -994,4 +983,14 @@ a.comment-edit-link{ position:relative;top: -15px; float:right;}
 .woocommerce table.cart th {font-size: 12px;font-weight: bold;}
 .woocommerce #content table.cart td.actions .coupon, .woocommerce table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon {padding: .8em;}
 	}
-	
+
+/*STATIC SLIDER RESPONSIVENESS (Quick Fix v-0.2.2)*/	
+.touchon .stat_bg { background-size: 100%;}
+.touchon #slidera {background: none;}
+.touchon .stat_bg , .touchon .stat_bg_overlay {display: none;}
+.stat_has_img .stat_content_inner {min-height: 250px;}
+.touchon .stat_has_img .stat_bg_img{ opacity:1;}
+.has_trans_header.touchon .stat_content_inner {bottom: 0!important;}
+@media screen and (max-width: 480px){
+.touchon .stat_has_img .stat_content_inner{ padding-top:0!important;}
+}

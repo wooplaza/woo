@@ -1437,6 +1437,14 @@ if (!class_exists('optimizer_theme_options')) {
 									'raw_html'=>true,
 									'desc' => optimizer_pro_msg(__('Contact Page Settings','optimizer'), __('Setup Contact Page Email address','optimizer'),true),											
 									),
+									
+								array(
+									'id'       => 'page_header_pro',
+									'type'     => 'info',
+									'title'    => '',
+									'raw_html'=>true,
+									'desc' => optimizer_pro_msg(__('Custom Page Header','optimizer'), __('Set Custom Page header for each page','optimizer'),true),											
+									),
 
 							
 						array(
@@ -2292,7 +2300,12 @@ if (!class_exists('optimizer_theme_options')) {
                 'title' => __('Find Us on Google Plus', 'optimizer'),
                 'icon'  => 'el-icon-googleplus'
             );
-
+            $this->args['share_icons'][] = array(
+                'url'   => 'https://www.pinterest.com/layerthemes/',
+                'title' => __('Find Us on Pinterest', 'optimizer'),
+                'icon'  => 'el-icon-pinterest'
+            );
+			
             // Panel Intro text -> before the form
                 $this->args['intro_text'] = __('<p><a class="doc_link" href="https://www.layerthemes.com/optimizer-documentation/" target="_blank">Documentation</a><a class="pro_link" href="https://www.layerthemes.com/theme/optimizer-upgrade/" target="_blank"><span>Upgrade To PRO</span> for 100+ Premium Features &amp; Lightning Fast Theme Support!</a></p><div style="clear:both"></div>', 'optimizer');
 

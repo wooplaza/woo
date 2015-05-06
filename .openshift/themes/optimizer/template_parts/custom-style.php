@@ -35,6 +35,7 @@ body, textarea, input{ font-family:<?php echo $optimizer['content_font_id']['fon
 <?php } ?>
 
 /*-----------------------------Static Slider Content box width------------------------------------*/
+<?php if($optimizer['slider_type_id'] =='noslider'){ ?>#slidera{min-height:initial;}<?php } ?>
 .stat_content_inner .center{width:<?php echo absint($optimizer['static_textbox_width']); ?>%!important;}
 
 /*STATIC SLIDE CTA BUTTONS COLORS*/
@@ -54,12 +55,16 @@ body, textarea, input{ font-family:<?php echo $optimizer['content_font_id']['fon
 		
 		<?php if(!empty($optimizer['head_transparent'])){ ?>
 		.home .header_wrap {width: 100%;float: left;position:relative;}
-		.home .header{position: absolute;z-index: 999;top: 0;}
+		.home .header{position: absolute!important;z-index: 999;top: 0;}
 		
 		.home .header{ background:transparent!important;}
 		.home .header .logo h2, .home .header .logo h1, .home .header .logo h2 a, .home .header .logo h1 a, .home span.desc{ color:<?php echo $optimizer['trans_header_color']; ?>!important;}
 		.home #topmenu ul li a{ color:<?php echo $optimizer['trans_header_color']; ?>!important;}
 		<?php } ?>
+		.home.has_trans_header.page .header{background:<?php echo $optimizer['head_color_id']; ?>!important;}
+		@media screen and (max-width: 480px){
+		.home.has_trans_header .header{ background:<?php echo $optimizer['head_color_id']; ?>!important;}
+		}
 
 <?php if($optimizer['sec_color_id']){ ?>
 /*Secondary Color*/
@@ -147,6 +152,7 @@ body, textarea, input{ font-family:<?php echo $optimizer['content_font_id']['fon
 /*LOGO*/
 .logo h2, .logo h1, .logo h2 a, .logo h1 a{ font-family:<?php echo $optimizer['logo_font_id']['font-family']; ?>!important; font-size:<?php echo $optimizer['logo_font_id']['font-size']; ?>!important; color:<?php echo $optimizer['logo_color_id']; ?>!important;letter-spacing:<?php echo $optimizer['logo_font_id']['letter-spacing']; ?>; font-weight:<?php echo $optimizer['logo_font_id']['font-weight']; ?>;}
 #simple-menu{color:<?php echo $optimizer['logo_color_id']; ?>!important;}
+body.home.has_trans_header #simple-menu{color:<?php echo $optimizer['trans_header_color']; ?>!important;}
 span.desc{color:<?php echo $optimizer['logo_color_id']; ?>!important;}
 
 /*Post Titles, headings and Menu Font*/
@@ -192,7 +198,10 @@ body, .home_cat a, .contact_submit input, .comment-form-comment textarea{ color:
 .page-template-template_partspage-blog_template-php .lay4 .post_content{width:100%;}
 <?php } ?>
 
-
+@media screen and (max-width: 480px){
+body.home.has_trans_header .header .logo h1 a{ color:<?php echo $optimizer['logo_color_id']; ?>!important;}
+body.home.has_trans_header .header #simple-menu{color:<?php echo $optimizer['logo_color_id']; ?>!important;}
+}
 /*USER'S CUSTOM CSS---------------------------------------------------------*/
 <?php if ( ! empty ( $optimizer['custom-css'] ) ) { ?><?php echo $optimizer['custom-css']; ?><?php } ?>
 /*---------------------------------------------------------*/

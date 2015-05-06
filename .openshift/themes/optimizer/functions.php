@@ -31,8 +31,8 @@ function optimizer_setup() {
 add_action( 'after_setup_theme', 'optimizer_setup' );
 
 //**************optimizer FUNCTIONS******************//
-require(get_template_directory() . '/framework/core-functions.php');			//Include Optimizer Core Functions 
-require(get_template_directory() . '/lib/functions/core.php');					//Include Woocommerce Functions
+require(get_template_directory() . '/framework/core-functions.php');			//Include Optimizer Framework Core Functions 
+require(get_template_directory() . '/lib/functions/core.php');					//Include Core Functions
 require(get_template_directory() . '/lib/functions/enqueue.php');					//Include Enqueue CSS/JS Scripts
 require(get_template_directory() . '/lib/functions/admin.php');				//Include Admin Functions (admin)
 require(get_template_directory() . '/lib/functions/woocommerce.php');			//Include Woocommerce Functions

@@ -8,12 +8,19 @@
  * 
  * @since Optimizer 1.0
  */
- 
 
+//CONTENT WIDTH
+function optimizer_content_width() {
+	global $content_width;
+	$full_width = is_page_template( 'page-fullwidth_template.php' );
+	if ( $full_width ) {
+		$content_width = 1100;
+	}else {
+		$content_width = 690;
+	}
+}
+add_action( 'template_redirect', 'optimizer_content_width' );
 
-//Content Width
-global $ontent_width;
-if ( ! isset( $content_width ) ) $content_width = 690;
 
 //UPDATED: GET THE FIRST IMAGE
 function optimizer_first_image() {
