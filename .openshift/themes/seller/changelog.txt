@@ -1,3 +1,7 @@
+Version 1.0.2.0
+
+	i) Fixed Bug which caused Social Icons to not work.
+
 Version 1.0.0.9
 
 	i) Removed Social Icons from Footer of Admin Panel.

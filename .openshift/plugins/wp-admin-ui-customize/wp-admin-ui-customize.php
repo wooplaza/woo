@@ -2,10 +2,10 @@
 /*
 Plugin Name: WP Admin UI Customize
 Description: An excellent plugin to customize the management screens.
-Plugin URI: http://wpadminuicustomize.com/?utm_source=use_plugin&utm_medium=list&utm_content=wauc&utm_campaign=1_5_2_6
-Version: 1.5.2.6
+Plugin URI: http://wpadminuicustomize.com/?utm_source=use_plugin&utm_medium=list&utm_content=wauc&utm_campaign=1_5_2_7
+Version: 1.5.2.7
 Author: gqevu6bsiz
-Author URI: http://gqevu6bsiz.chicappa.jp/?utm_source=use_plugin&utm_medium=list&utm_content=wauc&utm_campaign=1_5_2_6
+Author URI: http://gqevu6bsiz.chicappa.jp/?utm_source=use_plugin&utm_medium=list&utm_content=wauc&utm_campaign=1_5_2_7
 Text Domain: wauc
 Domain Path: /languages
 */
@@ -58,7 +58,7 @@ class WP_Admin_UI_Customize
 
 
 	function __construct() {
-		$this->Ver = '1.5.2.6';
+		$this->Ver = '1.5.2.7';
 		$this->Name = 'WP Admin UI Customize';
 		$this->Dir = plugin_dir_path( __FILE__ );
 		$this->Url = plugin_dir_url( __FILE__ );
@@ -103,7 +103,10 @@ class WP_Admin_UI_Customize
 	function PluginSetup() {
 		// load text domain
 		load_plugin_textdomain( $this->ltd , false , $this->PluginSlug . '/languages' );
-
+		
+		// action
+		do_action( $this->ltd . '_plugins_loaded' );
+		
 		// plugin links
 		add_filter( 'plugin_action_links' , array( $this , 'plugin_action_links' ) , 10 , 2 );
 
@@ -199,6 +202,10 @@ class WP_Admin_UI_Customize
 			$this->ActivatedPlugin["post_edit_toolbar"] = true;
 		}
 
+		if( is_plugin_active( 'polylang/polylang.php' ) ) {
+			$this->ActivatedPlugin["polylang"] = true;
+		}
+		
 	}
 
 
@@ -369,7 +376,9 @@ class WP_Admin_UI_Customize
 		if( !empty( $apply_user_roles ) ) {
 			$UserRoles = $this->get_user_role();
 			foreach( $apply_user_roles as $role => $v ) {
-				$Contents .= '[ ' . $UserRoles[$role]["label"] . ' ]';
+				if( !empty( $UserRoles[$role] ) ) {
+					$Contents .= '[ ' . $UserRoles[$role]["label"] . ' ]';
+				}
 			}
 		} else {
 			$Contents .= __( 'None' );
@@ -405,7 +414,7 @@ class WP_Admin_UI_Customize
 					foreach( $sm as $sm_key => $sm_set ) {
 						
 						if( preg_match("/^customize.php/", $sm_set[2] ) )
-							$this->SubMenu[$submenu_key][$sm_key][2] = remove_query_arg( array( 'return' ) , $sm_set[2] );
+							$this->SubMenu[$submenu_key][$sm_key][2] = esc_url( remove_query_arg( array( 'return' ) , $sm_set[2] ) );
 						
 					}
 					
@@ -449,6 +458,15 @@ class WP_Admin_UI_Customize
 					}
 				}
 			}
+
+			if( !empty( $this->ActivatedPlugin["polylang"] ) ) {
+				$plugin_slug = 'languages';
+				foreach( $this->Admin_bar as $node_id => $node ) {
+					if( strstr( $node_id , $plugin_slug ) or strstr( $node->id , $plugin_slug ) ) {
+						$this->OtherPluginMenu["admin_bar"]['polylang'][$node_id] = 1;
+					}
+				}
+			}
 			
 			if( !empty( $this->OtherPluginMenu["admin_bar"] ) ) {
 				for($i = 0; $i < 4; $i++) {
@@ -461,6 +479,7 @@ class WP_Admin_UI_Customize
 					}
 				}
 			}
+
 		}
 	}
 
@@ -609,6 +628,15 @@ class WP_Admin_UI_Customize
 				}
 			}
 
+			if( !empty( $this->ActivatedPlugin["polylang"] ) ) {
+				$plugin_slug = 'languages';
+				foreach( $Filter_bar['left']['sub'] as $node_id => $node ) {
+					if( strstr( $node->parent , $plugin_slug ) ) {
+						unset( $Filter_bar['left']['sub'][$node_id] );
+					}
+				}
+			}
+
 		}
 		
 		return $Filter_bar;
@@ -661,7 +689,7 @@ class WP_Admin_UI_Customize
 			$GetData = $this->get_data( "regist_metabox" );
 			$post_type = $current_screen->post_type;
 			$Metaboxes = $wp_meta_boxes[$post_type];
-				
+			
 			$Update = array();
 			if( empty( $GetData ) ) {
 
@@ -825,7 +853,7 @@ class WP_Admin_UI_Customize
 		if ( is_object( $menu_widget ) ) $menu_widget = (array) $menu_widget;
 		if( !isset( $menu_widget["group"] ) ) $menu_widget["group"] = 0;
 		if( !isset( $menu_widget["meta"]["class"] ) ) $menu_widget["meta"]["class"] = "";
-		$no_submenu = array( 'search' , 'bp-notifications' , 'menu-toggle' , 'post_list' , 'page_list' );
+		$no_submenu = array( 'search' , 'bp-notifications' , 'languages' , 'menu-toggle' , 'post_list' , 'page_list' );
 		$activated_plugin = $this->ActivatedPlugin;
 		$other_plugin = $this->OtherPluginMenu;
 
@@ -1301,7 +1329,7 @@ class WP_Admin_UI_Customize
 		if( !empty( $Update ) && check_admin_referer( $this->Nonces["value"] , $this->Nonces["field"] ) ) {
 			$record = apply_filters( 'wauc_pre_delete' , $this->Record[$record] );
 			delete_option( $record );
-			wp_redirect( add_query_arg( $this->MsgQ , 'delete' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'delete' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1316,7 +1344,7 @@ class WP_Admin_UI_Customize
 					delete_option( $record );
 				}
 			}
-			wp_redirect( add_query_arg( $this->MsgQ , 'delete' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'delete' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1330,7 +1358,7 @@ class WP_Admin_UI_Customize
 				$SubmitKey = md5( strip_tags( $_POST["donate_key"] ) );
 				if( $this->DonateKey == $SubmitKey ) {
 					update_option( $this->Record["donate"] , $SubmitKey );
-					wp_redirect( add_query_arg( $this->MsgQ , 'donated' ) );
+					wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'donated' ) ) );
 					exit;
 				}
 			}
@@ -1352,7 +1380,7 @@ class WP_Admin_UI_Customize
 			}
 
 			update_option( $this->Record["user_role"] , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1372,7 +1400,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["site"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1392,7 +1420,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["admin_general"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1412,7 +1440,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["dashboard"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1467,7 +1495,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["admin_bar_menu"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1497,7 +1525,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["sidemenu"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1522,7 +1550,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["manage_metabox"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1542,7 +1570,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["post_add_edit"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1562,7 +1590,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["appearance_menus"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 		}
 	}
@@ -1582,7 +1610,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["loginscreen"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 
 		}
@@ -1599,7 +1627,7 @@ class WP_Admin_UI_Customize
 
 			$Record = apply_filters( 'wauc_pre_update' , $this->Record["plugin_cap"] );
 			update_option( $Record , $Update );
-			wp_redirect( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) );
+			wp_redirect( esc_url_raw( add_query_arg( $this->MsgQ , 'update' , stripslashes( $_POST["_wp_http_referer"] ) ) ) );
 			exit;
 
 		}
@@ -2005,6 +2033,24 @@ class WP_Admin_UI_Customize
 											}
 										}
 									}
+								} elseif( $node["id"] == 'languages' ) {
+									foreach($All_Nodes as $default_node_id => $default_node) {
+										if( $default_node->parent == $node["id"] ) {
+											$subnode_type = '';
+											if( $node_type == 'main' ) {
+												$subnode_type = 'sub';
+											} elseif( $node_type == 'sub' ) {
+												 $subnode_type = 'sub2';
+											} elseif( $node_type == 'sub2' ) {
+												$subnode_type = 'sub3';
+											} elseif( $node_type == 'sub3' ) {
+												$subnode_type = 'sub4';
+											}
+											if( !empty( $subnode_type ) ) {
+												$SettingNodes[$Boxtype][$subnode_type][] = (array) $default_node;
+											}
+										}
+									}
 								}
 								foreach( $activated_plugin as $plugin_slug => $v ) {
 									if( !empty( $other_plugin["admin_bar"][$plugin_slug] ) && array_key_exists( $node["id"] , $other_plugin["admin_bar"][$plugin_slug] ) ) {
@@ -2279,7 +2325,7 @@ class WP_Admin_UI_Customize
 				$SetMain_submenu = array();
 				
 				$separator_menu = array( 0 => "" , 1 => 'read' , 2 => 'separator1' , 3 => "" , 4 => 'wp-menu-separator' );
-				$customize_url = add_query_arg( 'return', urlencode( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'customize.php' );
+				$customize_url = esc_url( add_query_arg( 'return', urlencode( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'customize.php' ) );
 				
 				if( !empty( $GetData["main"] ) ) {
 					
@@ -2294,7 +2340,7 @@ class WP_Admin_UI_Customize
 							$controll = str_replace( 'customize.php?autofocus%5Bcontrol%5D=' , '' , $mm["slug"] );
 							
 							if( !empty( $controll ) )
-								$GetData["main"][$mm_pos]["slug"] = add_query_arg( 'autofocus[control]' , $controll , $customize_url );
+								$GetData["main"][$mm_pos]["slug"] = esc_url( add_query_arg( 'autofocus[control]' , $controll , $customize_url ) );
 
 						}
 
@@ -2328,7 +2374,7 @@ class WP_Admin_UI_Customize
 							$controll = str_replace( 'customize.php?autofocus%5Bcontrol%5D=' , '' , $sm["slug"] );
 							
 							if( !empty( $controll ) )
-								$GetData["sub"][$sm_pos]["slug"] = add_query_arg( 'autofocus[control]' , $controll , $customize_url );
+								$GetData["sub"][$sm_pos]["slug"] = esc_url( add_query_arg( 'autofocus[control]' , $controll , $customize_url ) );
 
 						}
 
