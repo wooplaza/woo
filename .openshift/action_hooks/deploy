@@ -42,6 +42,10 @@ if [ ! -d ${OPENSHIFT_DATA_DIR}themes ]; then
   mv ${dest_dir}/wp-content/themes ${OPENSHIFT_DATA_DIR}themes
 fi
 
+if [ ! -d ${OPENSHIFT_DATA_DIR}uploads ]; then
+  mv ${dest_dir}/wp-content/uploads ${OPENSHIFT_DATA_DIR}uploads
+fi
+
 # Users can place their own plugins and themes into .openshift/ directory
 # inside their GIT repository.
 #
@@ -50,6 +54,9 @@ cp -rf $OPENSHIFT_REPO_DIR/.openshift/plugins/* ${OPENSHIFT_DATA_DIR}plugins/ 2>
 
 echo "Copying WordPress themes from .openshift/themes"
 cp -rf $OPENSHIFT_REPO_DIR/.openshift/themes/* ${OPENSHIFT_DATA_DIR}themes/ 2>/dev/null
+
+echo "Copying WordPress uploads from .openshift/themes"
+cp -rf $OPENSHIFT_REPO_DIR/.openshift/uploads/* ${OPENSHIFT_DATA_DIR}uploads/ 2>/dev/null
 
 echo "Copying WordPress languages from .openshift/languages"
 cp -rf $OPENSHIFT_REPO_DIR/.openshift/languages/* ${OPENSHIFT_DATA_DIR}languages/ 2>/dev/null
